@@ -1,0 +1,39 @@
+pluginManagement {
+    repositories {
+        //google()
+        //mavenCentral()
+        //jcenter() // Warning: this repository is going to shut down soon
+        maven{ url'https://maven.aliyun.com/repository/google' }
+        maven{ url'https://maven.aliyun.com/repository/public' }
+        maven{
+            allowInsecureProtocol(true)
+            url 'http://maven.gospell.com/repository/maven-public/'
+            credentials {
+                username 'admin'
+                password 'admin123'
+            }
+        }
+        maven {url "https://www.jitpack.io" }
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        /*google()
+        mavenCentral()*/
+        maven{ url'https://maven.aliyun.com/repository/google' }
+        maven{ url'https://maven.aliyun.com/repository/public' }
+        maven{
+            allowInsecureProtocol(true)
+            url 'http://maven.gospell.com/repository/maven-public/'
+            credentials {
+                username 'admin'
+                password 'admin123'
+            }
+        }
+        maven {url "https://www.jitpack.io" }
+    }
+}
+
+rootProject.name = "monitor"
+include ':app'

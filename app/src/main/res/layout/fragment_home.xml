@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.home.HomeFragment">
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="5dp"
+            android:layout_weight="1">
+
+        <SurfaceView
+                android:id="@+id/surfaceView_top"
+                android:layout_width="match_parent"
+                android:layout_height="300dp" />
+
+        <EditText
+                android:id="@+id/url_push"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:gravity="center"
+                android:text="@string/hint_rtmp_push"
+                android:textColor="@color/white"
+                android:textColorHint="@color/gray"
+                android:theme="@style/EditTextStyle" />
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_margin="20dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+            <Button
+                    android:id="@+id/b_start_stop"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:background="@color/colorAccent"
+                    android:minWidth="0dp"
+                    android:minHeight="0dp"
+                    android:text="@string/start_button"
+                    android:theme="@style/ButtonStyle" />
+
+            <Button
+                    android:id="@+id/switch_camera"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorAccent"
+                    android:minWidth="0dp"
+                    android:minHeight="0dp"
+                    android:text="@string/switch_camera_button"
+                    android:theme="@style/ButtonStyle" />
+        </LinearLayout>
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
